@@ -6,7 +6,6 @@ export default function MainPage() {
     return(
         <div>
             <LeftCommitMessage/>
-            <SlideList/>
             <ResultList/>            
         </div>
     );
