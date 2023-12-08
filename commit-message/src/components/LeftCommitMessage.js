@@ -32,9 +32,7 @@ export default function Message() {
     };
 
     const onClickToggleAuto = () => {
-        //let isAuto = auto;
         setAuto(!auto);
-        console.log(auto);
     };
 
     // todo
