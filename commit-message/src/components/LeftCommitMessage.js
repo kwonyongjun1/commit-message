@@ -1,5 +1,12 @@
 import React, {useState} from 'react'
 
+// reducer 형태 
+// {
+//     autoMode : true,
+//     emoji : "Feat",
+//     type : ""
+// }
+
 export default function Message() {
     const [auto, setAuto] = useState(true);
     const [emoji, setEmoji] = useState("✨")
@@ -25,7 +32,9 @@ export default function Message() {
     };
 
     const onClickToggleAuto = () => {
-
+        //let isAuto = auto;
+        setAuto(!auto);
+        console.log(auto);
     };
 
     // todo
