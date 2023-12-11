@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { useSelector, useDispatch } from "react-redux";
-import { setAutoMode } from "../actions/"
+import { setAutoMode } from "../redux/actions/Message"
 export default function Message() {
 
     const dispatch = useDispatch();

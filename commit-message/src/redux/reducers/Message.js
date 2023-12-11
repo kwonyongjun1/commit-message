@@ -1,9 +1,8 @@
-// reducers.js
 import {
     SET_AUTO_MODE,
     SET_EMOJI,
     SET_TYPE,
-  } from '../actions';
+  } from '../actions/Message';
   
   const initialState = {
     autoMode: true,
