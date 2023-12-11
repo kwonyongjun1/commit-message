@@ -14,7 +14,7 @@ import {
   const rootReducer = (state = initialState, action) => {
     switch (action.type) {
       case SET_AUTO_MODE:
-        return { ...state, autoMode: !state.autoMode };
+        return { ...state, autoMode: action.payload };
       case SET_EMOJI:
         return { ...state, emoji: action.payload };
       case SET_TYPE:
@@ -23,6 +23,7 @@ import {
         return state;
     }
   };
+  
   
   export default rootReducer;
   
