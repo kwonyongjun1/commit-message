@@ -42,7 +42,7 @@ export default function Message() {
     return(
         <div>
            <article>
-                <button onClick={onClickToggleAuto}>{autoMode}</button>
+                <button onClick={onClickToggleAuto}> 토글 </button>
                 <header>
                     <button id="emoji">emoji</button>
                     <input type="text" id="type" placeholder="type" onChange={onChangeType}/>
