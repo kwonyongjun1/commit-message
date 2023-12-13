@@ -1,11 +1,10 @@
 // src/redux/index.js
-import { createStore, combineReducers } from 'redux';
-import Message from './Message';
+import { combineReducers } from 'redux';
+import messageReducer from './Message';
 
 const rootReducer = combineReducers({
-    Message : Message,
+    Message : messageReducer,
 });
 
-const store = createStore(rootReducer);
 
-export default store;
+export default rootReducer;

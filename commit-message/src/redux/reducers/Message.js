@@ -4,13 +4,13 @@ import {
     SET_TYPE,
   } from '../actions/Message';
   
-  const initialState = {
+  const messageState = {
     autoMode: true,
     emoji: 'sparkles',
-    type: undefined,
+    type: '',
   };
   
-  const rootReducer = (state = initialState, action) => {
+  const messageReducer = (state = messageState, action) => {
     switch (action.type) {
       case SET_AUTO_MODE:
         return { ...state, autoMode: action.payload };
@@ -24,5 +24,5 @@ import {
   };
   
   
-  export default rootReducer;
+  export default messageReducer;
   
