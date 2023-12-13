@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
 import { useSelector, useDispatch } from "react-redux";
-import { setAutoMode } from "../redux/actions/Message"
+import { setAutoMode, setType } from "../redux/actions/Message"
 export default function Message() {
 
     const dispatch = useDispatch();
-    const autoMode = useSelector(state => state.autoMode);
+    const autoMode = useSelector(state => state.Message.autoMode);
     
     const [scope, setScope] = useState();
     const [body, setBody] = useState();
@@ -12,10 +12,10 @@ export default function Message() {
 
     const onClickToggleAuto = () => {
         dispatch(setAutoMode(!autoMode));
-        console.log(autoMode);
     };
 
-    const onChangeType = (event) => {
+    const onChangeType = (e) => {
+        dispatch(setType(e.target.value));
     };
 
     const onChangeScope = (event) => {
