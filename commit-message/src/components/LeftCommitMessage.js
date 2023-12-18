@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { useSelector, useDispatch } from "react-redux";
-import { setAutoMode, setType } from "../redux/actions/Message"
+import { setAutoMode, setType, setCurrentState } from "../redux/actions/Message";
+import {STATE} from "../constants";
 export default function Message() {
 
     const dispatch = useDispatch();
@@ -14,8 +15,16 @@ export default function Message() {
         dispatch(setAutoMode(!autoMode));
     };
 
+    const onClickEmoji = () =>{
+        dispatch(setCurrentState(STATE.EMOJI_MODE));
+    };
+
     const onChangeType = (e) => {
         dispatch(setType(e.target.value));
+    };
+
+    const onClickType = () => {
+        dispatch(setCurrentState(STATE.TYPE_MODE));
     };
 
     const onChangeScope = (event) => {
@@ -44,8 +53,8 @@ export default function Message() {
            <article>
                 <button onClick={onClickToggleAuto}> 토글 </button>
                 <header>
-                    <button id="emoji">emoji</button>
-                    <input type="text" id="type" placeholder="type" onChange={onChangeType}/>
+                    <button id="emoji" onClick={onClickEmoji}>emoji</button>
+                    <input type="text" id="type" placeholder="type" onClick = {onClickType} onChange={onChangeType}/>
                     :
                     <input type="text" id="scope" placeholder="scope" onChange={onChangeScope}/>
                 </header>    
