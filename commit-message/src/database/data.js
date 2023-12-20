@@ -1,4 +1,4 @@
-const typeList = [
+export const typeList = [
     {name : "Feat", description : "새로운 기능을 추가할 경우", rec : "sparkles"},
     {name : "Fix", description : "버그를 고친 경우", rec : "bug" },
     {name : "Design", description : "CSS 등 사용자 UI 디자인 변경", rec : "lipstick"},
@@ -14,8 +14,9 @@ const typeList = [
     {name : "Rename", description : "파일 혹은 폴더명을 수정하거나 옮기는 작업만인 경우", rec : "truck"},   
     {name : "Remove", description : "파일을 삭제하는 작업만 수행한 경우", rec : "fire"},
     {name : "Build", description : "컴파일 후 코드, 새로운 패키지 업데이트", rec : "package"}
- ],
- emojiList = [
+];
+
+export const emojiList = [
     {id : "sparkles", emoji : "✨"},
     {id : "bug", emoji : "🐛"},
     {id : "lipstick", emoji : "💄"},
@@ -31,4 +32,4 @@ const typeList = [
     {id : "truck", emoji : "🚚"},
     {id : "fire", emoji : "🔥"},
     {id : "package", emoji : "📦"},
- ]
+];
