@@ -17,19 +17,24 @@ export const typeList = [
 ];
 
 export const emojiList = [
-    {id : "sparkles", emoji : "✨"},
-    {id : "bug", emoji : "🐛"},
-    {id : "lipstick", emoji : "💄"},
-    {id : "boom", emoji : "💥"},
-    {id : "ambulance", emoji : "🚑"},
-    {id : "art", emoji : "🎨"},
-    {id : "recycle", emoji : "️♻"},
-    {id : "bulb", emoji : "💡"},
-    {id : "memo", emoji : "📝"},
-    {id : "test_tube", emoji : "🧪"},
-    {id : "building_construction", emoji : "🏗"},
-    {id : "newspaper", emoji : "📰"},
-    {id : "truck", emoji : "🚚"},
-    {id : "fire", emoji : "🔥"},
-    {id : "package", emoji : "📦"},
+    {id : "sparkles", emoji : "✨", relType: "Feat"},
+    {id : "bug", emoji : "🐛", relType: "Fix"},
+    {id : "lipstick", emoji : "💄", relType: "Design"},
+    {id : "boom", emoji : "💥", relType: "!BREAKING"},
+    {id : "ambulance", emoji : "🚑", relType: "!HOTFIX"},
+    {id : "art", emoji : "🎨", relType: "Style"},
+    {id : "recycle", emoji : "️♻", relType: "Refactor"},
+    {id : "bulb", emoji : "💡", relType: "Comment"},
+    {id : "memo", emoji : "📝", relType: "Docs"},
+    {id : "test_tube", emoji : "🧪", relType: "Test"},
+    {id : "building_construction", emoji : "🏗", relType: "Chore"},
+    {id : "newspaper", emoji : "📰", relType: "Create"},
+    {id : "truck", emoji : "🚚", relType: "Rename"},
+    {id : "fire", emoji : "🔥", relType: "Remove"},
+    {id : "package", emoji : "📦", relType: "Build"},
 ];
+
+export const LANGUAGE = {
+    ENGLISH : 'EN',
+    KOREAN : 'KO',
+};
