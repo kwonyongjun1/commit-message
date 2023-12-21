@@ -8,8 +8,8 @@ import {
 
   const messageState = {
     autoMode: true,
-    emoji: "sparkles",
-    type: " ",
+    emoji: "",
+    type: "",
     currentState : STATE.DEFAULT_MODE
   };
   
