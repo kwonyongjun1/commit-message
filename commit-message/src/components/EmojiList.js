@@ -6,20 +6,26 @@ import { setEmoji } from '../redux/actions/Message';
 export default function EmojiList() {
 
     const dispatch = useDispatch();
+
     const onClickEmoji = (id) => {
         let emoji = findEmojiFromId(id);
         dispatch(setEmoji(emoji.emoji));
     };
-
     
     return(
-        <div>
-           emojiList 컴포넌트
-           {emojiList.map((item) => (
-            <div key={item.id} onClick={()=>{onClickEmoji(item.id)}}>
-                <li>{item.id} {item.emoji}</li>
-            </div>  
+        <div className = "middle-wrap">
+            <div className="grid-container">
+            {emojiList.map((item) => (
+                <dl className="grid-item"  key={item.id} onClick={()=>{onClickEmoji(item.id)}}>
+                    <dt className="emoji">
+                        {item.emoji}
+                    </dt>
+                    <dd className="emoji-detail">
+                        {item.id}
+                    </dd>
+                </dl>
             ))}
+            </div>
         </div>
     );
 } 
