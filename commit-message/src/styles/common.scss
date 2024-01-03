@@ -1,0 +1,203 @@
+*{
+    font-family: emoji!important;
+    font-weight: 100;
+}
+
+.selector-for-some-widget {
+    box-sizing: content-box;
+}
+
+.body {
+    background-color: #212121;
+    color: white;
+    width: 100%;
+    display: -webkit-box;
+    height: 100vh;
+
+    .left-wrap {
+        width: 30em;
+        padding: 30px 30px 0px 30px;
+        background: rgb(64, 64, 64);
+        box-shadow: 0 0 20px black;
+        font: 15px/2;
+
+        header{
+            text-align: center;
+            font-weight: 700;
+
+            span{
+                font-size: xxx-large;
+            }
+        }
+        .commit-message{
+            display: flex;
+            flex-direction: column;
+            text-align: -webkit-center;
+            background-color: rgb(94, 94, 94);
+            border-radius : 10px;
+
+            header{
+                width: 100%;
+                text-align: -webkit-left;
+                padding: 10px;
+                button {
+                    border-radius : 10px;
+                    border: 1px solid #efefef;
+                    background: rgb(94, 94, 94);
+                    color: #efefef;
+                }
+                input{
+                    border-radius : 10px;
+                    border: 1px solid #efefef;
+                    background: rgb(94, 94, 94);
+                    color: #efefef;
+                }
+                #scope{
+                    width: 65px;
+                    border: 1px solid #efefef;
+                    background: rgb(94, 94, 94);
+                    color: #efefef;
+                }
+                #shortSummary{
+                    width: 229px;
+                }
+            }
+            .body{
+                padding: 10px;
+                textarea{
+                    width: 100%;
+                    border: none;
+                    resize: none;
+                    padding : 10px;
+                }
+                #commitBody{
+                    height: 180px;
+                }
+                #commitFooter{
+                    margin-top: 10px;
+                    height: 90px;
+                }
+            }
+            .footer{
+                background: rgb(64, 64, 64);
+                padding-top: 10px;
+                
+                button{
+                    background: rgb(64, 64, 64);
+                    width: 100%;
+                    text-align: left;
+                    color: white;
+                    border: none;
+                    font-size: xx-large;
+                }
+            }
+        }
+
+    }
+
+    .middle-wrap {
+        height: calc(100vh - 40px);;
+        margin: 20px;
+        padding: 30px;
+        background: rgb(64, 64, 64);
+        box-shadow: 0 0 20px black;
+        overflow-y: auto;
+        font: 15px/2 Georgia, Serif;
+        width: calc(100% - 30em - 65px);
+        min-width: 408px;
+        
+        .grid-container{
+            display: grid;
+            grid-template-columns: 280px;
+            grid-gap: 10px;
+            place-content: center;
+            .grid-item {
+                background-color: rgb(94, 94, 94);
+                border-radius: 15px;
+                font-size: 200%;
+                border: solid #333;
+                transition: border-color 0.3s ease;
+                line-height: 55px;
+                position: relative;
+                cursor: pointer;
+                display: -webkit-box;
+                min-height: 67px;
+
+                .emoji{
+                    display: flex;
+                    width: 2.8em;
+                    place-content: center;
+                    padding: 10px;
+                }
+
+                .emoji-detail{
+                    font-size: 14px;
+                    text-align: left;
+                    line-height: 3; 
+                    width: 15em;
+                }
+            }
+            .grid-item:hover{
+                border-color:white;
+            }
+        }
+        @media screen and (min-width: 1200px){
+            .grid-container{
+                grid-template-columns: 280px 280px;
+            }
+        }
+        @media screen and (min-width: 1500px){
+            .grid-container{
+                grid-template-columns: 280px 280px 280px;
+            }
+        }
+        @media screen and (min-width: 1700px){
+            .grid-container{
+                grid-template-columns: 20em 20em 20em 20em;
+            }
+        }
+    }
+}
+
+textarea{
+    background-color: rgb(94, 94, 94);
+    border: none;
+    outline: none;
+    color: #efefef;
+}
+
+.form-check{
+    input{
+        margin-top: 7px!important;
+    }
+    label{
+        padding-right: 10px;
+    }
+}
+
+.setting-area{
+    display: flex;
+    padding: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 18px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #212121;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(94, 94, 94, 0.5);
+  }
+
+
+
