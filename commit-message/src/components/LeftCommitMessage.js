@@ -9,6 +9,8 @@ export default function Message() {
     const dispatch = useDispatch();
     const autoMode = useSelector(state => state.Message.autoMode);
     const emoji = useSelector(state => state.Message.emoji);
+    const type = useSelector(state => state.Message.type);
+
     const [scope, setScope] = useState();
     const [body, setBody] = useState();
     const [footer, setFooter] = useState();
@@ -49,36 +51,61 @@ export default function Message() {
 
     // todo
     const copyMessage = () => {
-        console.log(scope);
-        console.log(body);
-        console.log(footer);
+        const message = {
+            emoji: "",
+            type: "",
+            scope: "",
+            shortSummary: "",
+            body: "",
+            footer: "",
+          };
+        //copy_message(message);
     };
 
 
     return(
-        <div>
-           <article>
-                {/* <label for="KoreaRadio">한국어</label>
-                <input type="radio" id="KoreaRadio" name="languageOptions" value="KO"/>
-                <label for="EnglishRadio">English</label>
-                <input type="radio" id="EnglishRadio" name="languageOptions" value="EN"/> */}
-                
-                <button onClick={onClickToggleAuto}> auto </button>
-                <header>
-                    <button id="emoji" onClick={onClickEmoji}>{emoji}</button>
-                    <input type="text" id="type" placeholder="type" onClick = {onClickType} onChange={onChangeType}/>
-                    :
-                    <input type="text" id="scope" placeholder="scope" onChange={onChangeScope}/>
-                </header>    
-                
-                <textarea id="body" placeholder="body" onChange={onChangeBody}>
-                </textarea>
+        
+        <section className = "left-wrap">
+        <header>
+            <span>Commit-Message</span>
+        </header>
+        <div className="setting-area">
+            {/* <div className="form-check form-switch">
+                <label className="form-check-label" for="flexSwitchCheckChecked">EmojiAuto</label>
+                <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked/>
+            </div>
+            <div className="form-check form-switch">
+                <label className="form-check-label" for="flexSwitchCheckChecked">Auto</label>
+                <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked/>
+            </div> */}
 
-                <textarea id="footer" placeholder="footer" onChange={onChangeFooter}>
-                </textarea>
-           </article>
+            <button onClick={onClickToggleAuto}> auto </button>
 
-           <button onClick={copyMessage}>저장</button>
         </div>
+        <article className="commit-message">
+            <header>
+            <button id="emoji" onClick={onClickEmoji}>{emoji}</button>
+            <button id="type">Feat</button>
+            {/* <input type="text" id="type" placeholder="type" onClick = {onClickType} onChange={onChangeType}/> */}
+            <input type="text" id="scope" placeholder="scope" onChange={onChangeScope}/>
+            :
+            <input type="text" id="shortSummary" placeholder="make log easier (#123)"/>
+            </header>
+            <div className = "body">
+            <textarea id="commitBody" placeholder="body" onChange={onChangeBody}></textarea>
+            <textarea id="commitFooter" placeholder="footer" onChange={onChangeFooter}></textarea>
+            </div>
+            <div className="footer">
+            <button onClick={copyMessage}>
+                copy
+            </button>
+            <button>
+                history
+            </button>
+            </div>
+        </article>
+        </section>
+        
+        
     );
 }
