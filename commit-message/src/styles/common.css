@@ -103,13 +103,13 @@
   width: calc(100% - 31em - 65px);
   min-width: 408px;
 }
-.mainBody .middle-wrap .grid-container {
+.mainBody .middle-wrap .grid-container-emoji {
   display: grid;
   grid-template-columns: 280px;
   grid-gap: 10px;
   place-content: center;
 }
-.mainBody .middle-wrap .grid-container .grid-item {
+.mainBody .middle-wrap .grid-container-emoji .grid-item {
   background-color: rgb(94, 94, 94);
   border-radius: 15px;
   font-size: 200%;
@@ -121,35 +121,45 @@
   display: -webkit-box;
   min-height: 67px;
 }
-.mainBody .middle-wrap .grid-container .grid-item .emoji {
+.mainBody .middle-wrap .grid-container-emoji .grid-item .emoji {
   display: flex;
   width: 2.8em;
   place-content: center;
   padding: 10px;
 }
-.mainBody .middle-wrap .grid-container .grid-item .emoji-detail {
+.mainBody .middle-wrap .grid-container-emoji .grid-item .emoji-detail {
   font-size: 14px;
   text-align: left;
   line-height: 3;
   width: 15em;
 }
-.mainBody .middle-wrap .grid-container .grid-item:hover {
+.mainBody .middle-wrap .grid-container-emoji .grid-item:hover {
   border-color: white;
 }
 @media screen and (min-width: 1200px) {
-  .mainBody .middle-wrap .grid-container {
+  .mainBody .middle-wrap .grid-container-emoji {
     grid-template-columns: 280px 280px;
   }
 }
 @media screen and (min-width: 1500px) {
-  .mainBody .middle-wrap .grid-container {
+  .mainBody .middle-wrap .grid-container-emoji {
     grid-template-columns: 280px 280px 280px;
   }
 }
 @media screen and (min-width: 1700px) {
-  .mainBody .middle-wrap .grid-container {
+  .mainBody .middle-wrap .grid-container-emoji {
     grid-template-columns: 20em 20em 20em 20em;
   }
+}
+.mainBody .middle-wrap .type-box {
+  background-color: rgb(94, 94, 94);
+  border-radius: 15px;
+  padding: 10px;
+  border: solid #333;
+  cursor: pointer;
+}
+.mainBody .middle-wrap .type-box:hover {
+  border-color: white;
 }
 
 textarea {
