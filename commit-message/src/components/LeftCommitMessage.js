@@ -94,7 +94,7 @@ export default function Message() {
                 <header>
                 <button id="emoji" onClick={onClickEmoji}>{emoji}</button>
                 {/* <button id="type">Feat</button> */}
-                <input type="text" id="type" placeholder="type" onClick = {onClickType} onChange={onChangeType}/>
+                <input type="text" id="type" placeholder="type" value={type} onClick = {onClickType} onChange={onChangeType}/>
                 <input type="text" id="scope" placeholder="scope" onChange={onChangeScope}/>
                 :
                 <input type="text" id="shortSummary" placeholder="make log easier (#123)" onChange={onChangeShortSummary}/>
