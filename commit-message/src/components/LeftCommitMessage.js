@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setAutoMode, setType, setCurrentState, setEmoji } from "../redux/actions/Message";
 import {STATE} from "../constants";
 import { findEmojiFromRelType, copyMessage} from "../utils";
+import Form from 'react-bootstrap/Form';
 
 export default function Message() {
 
@@ -10,7 +11,6 @@ export default function Message() {
     const autoMode = useSelector(state => state.Message.autoMode);
     const emoji = useSelector(state => state.Message.emoji);
     const type = useSelector(state => state.Message.type);
-
     const [shortSummary, setShortSummary] = useState();
     const [scope, setScope] = useState();
     const [body, setBody] = useState();
@@ -78,16 +78,15 @@ export default function Message() {
                 <span>Commit-Message</span>
             </header>
             <div className="setting-area">
-                {/* <div className="form-check form-switch">
-                    <label className="form-check-label" for="flexSwitchCheckChecked">EmojiAuto</label>
-                    <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked/>
-                </div>
-                <div className="form-check form-switch">
-                    <label className="form-check-label" for="flexSwitchCheckChecked">Auto</label>
-                    <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked/>
-                </div> */}
-
-                <button onClick={onClickToggleAuto}> auto </button>
+                <Form>
+                    <Form.Check 
+                        type="switch"
+                        id="custom-switch"
+                        label="EmojiAuto"
+                        onClick={onClickToggleAuto}
+                    />
+                </Form>
+                <button>Clear</button>
 
             </div>
             <article className="commit-message">
