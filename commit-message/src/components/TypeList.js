@@ -4,11 +4,12 @@ import { typeList} from "../database/data"
 import { useDispatch } from 'react-redux';
 import { setType } from "../redux/actions/Message"
 export default function TypeList() {
+    
     const dispatch = useDispatch();
     const selectedType = useSelector(state => state.Message.type);
 
-    const onClickType = (name) =>{
-        dispatch(setType(name));
+    const onClickType = (type) =>{
+        dispatch(setType(type.name));
     };
 
     return(
@@ -16,7 +17,7 @@ export default function TypeList() {
             <div>
             {typeList.map((item) => (
                     item.name.includes(selectedType)  && (
-                    <dl className="type-box" key={item.name} onClick={()=>{onClickType(item.name)}}>
+                    <dl className="type-box" key={item.name} onClick={()=>{onClickType(item)}}>
                         <dt>
                             {item.name}
                         </dt>
