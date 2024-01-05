@@ -8,9 +8,9 @@ import {
 
   const messageState = {
     autoMode: true,
-    emoji: "",
+    emoji: "✨",
     type: "",
-    currentState : STATE.DEFAULT_MODE
+    currentState : STATE.EMOJI_MODE
   };
   
   const messageReducer = (state = messageState, action) => {

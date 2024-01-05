@@ -1,13 +1,18 @@
 import React from 'react'
 import LeftCommitMessage from '../components/LeftCommitMessage';
-import ContentsList from '../components/ContentsList';
 import EmojiList from '../components/EmojiList';
-import SlideList from '../components/SlideList'
+import TypeList from '../components/TypeList';
+import { useSelector } from 'react-redux';
+import {STATE} from "../constants"
+
 export default function MainPage() {
+    const state = useSelector(state => state.Message.currentState);
+    
     return(
         <div className='mainBody'>
             <LeftCommitMessage/>
-            <EmojiList/>
+            { state === STATE.EMOJI_MODE && <EmojiList/>}
+            { state === STATE.TYPE_MODE && <TypeList/>}
         </div>
     );
 }
