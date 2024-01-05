@@ -7,7 +7,7 @@
     box-sizing: content-box;
 }
 
-.body {
+.mainBody {
     background-color: #212121;
     color: white;
     width: 100%;
@@ -15,7 +15,7 @@
     height: 100vh;
 
     .left-wrap {
-        width: 30em;
+        width: 31em;
         padding: 30px 30px 0px 30px;
         background: rgb(64, 64, 64);
         box-shadow: 0 0 20px black;
@@ -61,6 +61,9 @@
                 #shortSummary{
                     width: 229px;
                 }
+                #type{
+                    width: 70px;
+                }
             }
             .body{
                 padding: 10px;
@@ -103,7 +106,7 @@
         box-shadow: 0 0 20px black;
         overflow-y: auto;
         font: 15px/2 Georgia, Serif;
-        width: calc(100% - 30em - 65px);
+        width: calc(100% - 31em - 65px);
         min-width: 408px;
         
         .grid-container{
