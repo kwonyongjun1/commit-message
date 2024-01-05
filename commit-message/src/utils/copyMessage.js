@@ -4,11 +4,13 @@ export const copyMessage = (message) => {
     const header = `${emoji} ${type + scope}: ${shortSummary}`;
     body = !!body ? `\n\n${body}` : "";
     footer = !!footer ? `\n\n${footer}` : "";
-    const temp4copy = document.createElement("textarea");
-    temp4copy.value = header + body + footer;
-    document.body.appendChild(temp4copy);
-    temp4copy.select();
-    document.execCommand("copy");
-    document.body.removeChild(temp4copy);
-    
+    const text = header + body + footer;
+    navigator.clipboard.writeText(text).then(
+        () => {
+            console.log('복사 성공');
+        },
+        (err) => {
+            console.error('복사 실패', err);
+        }
+    );
 }
