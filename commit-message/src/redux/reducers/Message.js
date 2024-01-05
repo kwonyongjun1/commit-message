@@ -7,7 +7,7 @@ import {
   import { STATE } from '../../constants';
 
   const messageState = {
-    autoMode: true,
+    autoMode: false,
     emoji: "✨",
     type: "",
     currentState : STATE.EMOJI_MODE

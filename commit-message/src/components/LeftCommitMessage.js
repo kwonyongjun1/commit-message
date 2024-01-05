@@ -26,7 +26,7 @@ export default function Message() {
 
     const onChangeType = (e) => {
         dispatch(setType(e.target.value));
-        if(true){ // todo Toggle 모드 
+        if(autoMode){
             let emoji = findEmojiFromRelType(e.target.value);
             if(emoji){
                 dispatch(setEmoji(emoji.emoji));
@@ -92,7 +92,6 @@ export default function Message() {
             <article className="commit-message">
                 <header>
                 <button id="emoji" onClick={onClickEmoji}>{emoji}</button>
-                {/* <button id="type">Feat</button> */}
                 <input type="text" id="type" placeholder="type" value={type} onClick = {onClickType} onChange={onChangeType}/>
                 <input type="text" id="scope" placeholder="scope" onChange={onChangeScope}/>
                 :
