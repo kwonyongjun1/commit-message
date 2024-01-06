@@ -59,6 +59,10 @@ export default function Message() {
         // window.localStorage.setItem(key, value)
     };
 
+    const onCLickHistory = () => {
+        dispatch(setCurrentState(STATE.HISTROY_MODE));
+    }
+
     const copy = () => {
         if(!!emoji && !!type && !!shortSummary){
             const message = {
@@ -94,26 +98,26 @@ export default function Message() {
             </div>
             <article className="commit-message">
                 <header>
-                <button id="emoji" onClick={onClickEmoji}>{emoji}</button>
-                <input type="text" id="type" placeholder="type" value={type} onClick = {onClickType} onChange={onChangeType}/>
-                <input type="text" id="scope" placeholder="scope" onChange={onChangeScope}/>
-                :
-                <input type="text" id="shortSummary" placeholder="make log easier (#123)" onChange={onChangeShortSummary}/>
+                    <button id="emoji" onClick={onClickEmoji}>{emoji}</button>
+                    <input type="text" className="type" placeholder="type" value={type} onClick = {onClickType} onChange={onChangeType}/>
+                    <input type="text" className="scope" placeholder="scope" onChange={onChangeScope}/>
+                    :
+                    <input type="text" className="shortSummary" placeholder="make log easier (#123)" onChange={onChangeShortSummary}/>
                 </header>
                 <div className = "body">
-                <textarea id="commitBody" placeholder="body" onChange={onChangeBody}></textarea>
-                <textarea id="commitFooter" placeholder="footer" onChange={onChangeFooter}></textarea>
+                    <textarea className="commitBody" placeholder="body" onChange={onChangeBody}></textarea>
+                    <textarea className="commitFooter" placeholder="footer" onChange={onChangeFooter}></textarea>
                 </div>
                 <div className="footer">
-                <button onClick={onClickCopy}>
-                    copy
-                </button>
-                <button>
-                    clear
-                </button>
-                <button>
-                    history
-                </button>
+                    <button onClick={onClickCopy}>
+                        copy
+                    </button>
+                    <button>
+                        clear
+                    </button>
+                    <button onClick={onCLickHistory}>
+                        history
+                    </button>
                 </div>
             </article>
         </section>
