@@ -23,18 +23,26 @@ export default function TypeList() {
     return(
         <div className='middle-wrap'>
             <div>
-            {typeList.map((item) => (
-                    item.name.includes(selectedType)  && (
-                    <dl className="type-box" key={item.name} onClick={()=>{onClickType(item)}}>
+            {
+                typeList.map((type) => (
+                    type.name.includes(selectedType) && (
+                    <dl className="type-box" key={type.name} onClick={()=>{onClickType(type)}}>
                         <dt>
-                            {item.name}
+                            {type.name}
                         </dt>
                         <dd>
-                            {item.description}
+                            {type.description}
                         </dd>
                     </dl>
-                    ) 
-                ))}
+                    )
+                ))
+            }
+            {
+                typeList.some(type => type.name === selectedType) && null ||
+                <div>
+                    No Result
+                </div> 
+            }
             </div>
         </div>
     );
