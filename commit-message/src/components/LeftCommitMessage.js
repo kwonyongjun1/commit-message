@@ -56,19 +56,24 @@ export default function Message() {
 
     const onClickCopy = () => {
         copy();
+        // window.localStorage.setItem(key, value)
     };
 
     const copy = () => {
-        const message = {
-            emoji: emoji,
-            type: type,
-            scope: scope,
-            shortSummary: shortSummary,
-            body: body,
-            footer: footer,
-          };
-          
-        copyMessage(message);
+        if(!!emoji && !!type && !!shortSummary){
+            const message = {
+                emoji: emoji,
+                type: type,
+                scope: scope,
+                shortSummary: shortSummary,
+                body: body,
+                footer: footer,
+              };
+              
+            copyMessage(message);
+        }else{
+            return alert("커밋 메시지를 작성해주세요");
+        }
     };
 
 
@@ -86,8 +91,6 @@ export default function Message() {
                         onClick={onClickToggleAuto}
                     />
                 </Form>
-                <button>Clear</button>
-
             </div>
             <article className="commit-message">
                 <header>
@@ -104,6 +107,9 @@ export default function Message() {
                 <div className="footer">
                 <button onClick={onClickCopy}>
                     copy
+                </button>
+                <button>
+                    clear
                 </button>
                 <button>
                     history
