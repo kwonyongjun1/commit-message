@@ -32,7 +32,7 @@ export default function HistoryList(){
                                 <input className="scope" type="text" placeholder="scope" value={message.scope}/>
                                 :
                                 <input className="shortSummary" type="text" placeholder="make log easier (#123)" value={message.shortSummary}/>
-                                <button onClick={onClickDelete}>삭제</button>
+                                <button className="delete" onClick={onClickDelete}>X</button>
                             </header>
                             <div className = "body">
                                 <div className="commitBody historyBox" placeholder="body">{message.body}</div>
