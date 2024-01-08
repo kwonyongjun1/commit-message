@@ -19,7 +19,7 @@ export default function HistoryList(){
     const setMessage = (message) =>{
         // TODO setMessage
     }
-    
+
     return(
         <div className = "middle-wrap">
             <div className="grid-container-history">
@@ -27,16 +27,16 @@ export default function HistoryList(){
                     <div className="grid-item" onClick={()=>{onClickMessage(message)}}>
                         <div className='commit-message'>
                             <header onClick={(event)=>{event.stopPropagation()}}>
-                                <button id="emoji" disabled>{item.emoji}</button>
-                                <input className="type" type="text" placeholder="type" value={item.type}/>
-                                <input className="scope" type="text" placeholder="scope" value={item.scope}/>
+                                <button id="emoji" disabled>{message.emoji}</button>
+                                <input className="type" type="text" placeholder="type" value={message.type}/>
+                                <input className="scope" type="text" placeholder="scope" value={message.scope}/>
                                 :
-                                <input className="shortSummary" type="text" placeholder="make log easier (#123)" value={item.shortSummary}/>
+                                <input className="shortSummary" type="text" placeholder="make log easier (#123)" value={message.shortSummary}/>
                                 <button onClick={onClickDelete}>삭제</button>
                             </header>
                             <div className = "body">
-                                <div className="commitBody historyBox" placeholder="body">{item.body}</div>
-                                <div className="commitFooter historyBox" placeholder="footer">{item.footer}</div>
+                                <div className="commitBody historyBox" placeholder="body">{message.body}</div>
+                                <div className="commitFooter historyBox" placeholder="footer">{message.footer}</div>
                             </div>
                         </div>
                     </div>
