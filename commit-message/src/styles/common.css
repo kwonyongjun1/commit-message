@@ -28,70 +28,6 @@
 .mainBody .left-wrap header span {
   font-size: xxx-large;
 }
-.mainBody .left-wrap .commit-message {
-  display: flex;
-  flex-direction: column;
-  text-align: -webkit-center;
-  background-color: rgb(94, 94, 94);
-  border-radius: 10px;
-}
-.mainBody .left-wrap .commit-message header {
-  width: 100%;
-  text-align: -webkit-left;
-  padding: 10px;
-}
-.mainBody .left-wrap .commit-message header button {
-  border-radius: 10px;
-  border: 1px solid #efefef;
-  background: rgb(94, 94, 94);
-  color: #efefef;
-}
-.mainBody .left-wrap .commit-message header input {
-  border-radius: 10px;
-  border: 1px solid #efefef;
-  background: rgb(94, 94, 94);
-  color: #efefef;
-}
-.mainBody .left-wrap .commit-message header #scope {
-  width: 65px;
-  border: 1px solid #efefef;
-  background: rgb(94, 94, 94);
-  color: #efefef;
-}
-.mainBody .left-wrap .commit-message header #shortSummary {
-  width: 229px;
-}
-.mainBody .left-wrap .commit-message header #type {
-  width: 70px;
-}
-.mainBody .left-wrap .commit-message .body {
-  padding: 10px;
-}
-.mainBody .left-wrap .commit-message .body textarea {
-  width: 100%;
-  border: none;
-  resize: none;
-  padding: 10px;
-}
-.mainBody .left-wrap .commit-message .body #commitBody {
-  height: 180px;
-}
-.mainBody .left-wrap .commit-message .body #commitFooter {
-  margin-top: 10px;
-  height: 90px;
-}
-.mainBody .left-wrap .commit-message .footer {
-  background: rgb(64, 64, 64);
-  padding-top: 10px;
-}
-.mainBody .left-wrap .commit-message .footer button {
-  background: rgb(64, 64, 64);
-  width: 100%;
-  text-align: left;
-  color: white;
-  border: none;
-  font-size: xx-large;
-}
 .mainBody .middle-wrap {
   height: calc(100vh - 40px);
   margin: 20px;
@@ -160,6 +96,111 @@
 }
 .mainBody .middle-wrap .type-box:hover {
   border-color: white;
+}
+.mainBody .middle-wrap .grid-container-history {
+  display: grid;
+  grid-template-columns: 480px;
+  grid-gap: 10px;
+  place-content: center;
+  cursor: pointer;
+}
+.mainBody .middle-wrap .grid-container-history .grid-item {
+  background-color: rgb(94, 94, 94);
+  border-radius: 15px;
+  border: solid #333;
+  transition: border-color 0.3s ease;
+  position: relative;
+  cursor: pointer;
+  display: -webkit-box;
+  min-height: 67px;
+  cursor: pointer;
+}
+.mainBody .middle-wrap .grid-container-history .grid-item .emoji {
+  display: flex;
+  width: 2.8em;
+  place-content: center;
+  padding: 10px;
+  cursor: pointer;
+}
+.mainBody .middle-wrap .grid-container-history .grid-item .emoji-detail {
+  font-size: 14px;
+  text-align: left;
+  line-height: 3;
+  width: 15em;
+  cursor: pointer;
+}
+.mainBody .middle-wrap .grid-container-history .grid-item:hover {
+  border-color: white;
+}
+@media screen and (min-width: 1600px) {
+  .mainBody .middle-wrap .grid-container-history {
+    grid-template-columns: 480px 480px;
+  }
+}
+
+.commit-message {
+  display: flex;
+  flex-direction: column;
+  text-align: -webkit-center;
+  background-color: rgb(94, 94, 94);
+  border-radius: 11px;
+}
+.commit-message header {
+  width: 100%;
+  text-align: -webkit-left;
+  padding: 10px;
+}
+.commit-message header button {
+  border-radius: 10px;
+  border: 1px solid #efefef;
+  background: rgb(94, 94, 94);
+  color: #efefef;
+}
+.commit-message header input {
+  border-radius: 10px;
+  border: 1px solid #efefef;
+  background: rgb(94, 94, 94);
+  color: #efefef;
+}
+.commit-message header .scope {
+  width: 65px;
+  border: 1px solid #efefef;
+  background: rgb(94, 94, 94);
+  color: #efefef;
+}
+.commit-message header .shortSummary {
+  width: 229px;
+}
+.commit-message header .type {
+  width: 70px;
+}
+.commit-message .body {
+  padding: 10px;
+}
+.commit-message .body textarea {
+  width: 100%;
+  border: none;
+  resize: none;
+  padding: 10px;
+}
+.commit-message .body .commitBody {
+  height: 180px;
+}
+.commit-message .body .commitFooter {
+  margin-top: 10px;
+  height: 90px;
+}
+.commit-message .footer {
+  background: rgb(64, 64, 64);
+  padding-top: 10px;
+}
+.commit-message .footer button {
+  background: rgb(64, 64, 64);
+  width: 100%;
+  text-align: left;
+  color: white;
+  border: none;
+  font-size: xx-large;
 }
 
 textarea {

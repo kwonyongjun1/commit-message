@@ -29,73 +29,6 @@
                 font-size: xxx-large;
             }
         }
-        .commit-message{
-            display: flex;
-            flex-direction: column;
-            text-align: -webkit-center;
-            background-color: rgb(94, 94, 94);
-            border-radius : 10px;
-
-            header{
-                width: 100%;
-                text-align: -webkit-left;
-                padding: 10px;
-                button {
-                    border-radius : 10px;
-                    border: 1px solid #efefef;
-                    background: rgb(94, 94, 94);
-                    color: #efefef;
-                }
-                input{
-                    border-radius : 10px;
-                    border: 1px solid #efefef;
-                    background: rgb(94, 94, 94);
-                    color: #efefef;
-                }
-                #scope{
-                    width: 65px;
-                    border: 1px solid #efefef;
-                    background: rgb(94, 94, 94);
-                    color: #efefef;
-                }
-                #shortSummary{
-                    width: 229px;
-                }
-                #type{
-                    width: 70px;
-                }
-            }
-            .body{
-                padding: 10px;
-                textarea{
-                    width: 100%;
-                    border: none;
-                    resize: none;
-                    padding : 10px;
-                }
-                #commitBody{
-                    height: 180px;
-                }
-                #commitFooter{
-                    margin-top: 10px;
-                    height: 90px;
-                }
-            }
-            .footer{
-                background: rgb(64, 64, 64);
-                padding-top: 10px;
-                
-                button{
-                    background: rgb(64, 64, 64);
-                    width: 100%;
-                    text-align: left;
-                    color: white;
-                    border: none;
-                    font-size: xx-large;
-                }
-            }
-        }
-
     }
 
     .middle-wrap {
@@ -169,6 +102,116 @@
         }
         .type-box:hover{
             border-color:white;
+        }
+
+        .grid-container-history{
+            display: grid;
+            grid-template-columns: 480px;
+            grid-gap: 10px;
+            place-content: center;
+            cursor: pointer;
+            .grid-item {
+                background-color: rgb(94, 94, 94);
+                border-radius: 15px;
+                border: solid #333;
+                transition: border-color 0.3s ease;
+                position: relative;
+                cursor: pointer;
+                display: -webkit-box;
+                min-height: 67px;
+                cursor: pointer;
+
+                .emoji{
+                    display: flex;
+                    width: 2.8em;
+                    place-content: center;
+                    padding: 10px;
+                    cursor: pointer;
+                }
+
+                .emoji-detail{
+                    font-size: 14px;
+                    text-align: left;
+                    line-height: 3; 
+                    width: 15em;
+                    cursor: pointer;
+                }
+            }
+            .grid-item:hover{
+                border-color:white;
+            }
+        }
+        @media screen and (min-width: 1600px){
+            .grid-container-history{
+                grid-template-columns: 480px 480px;
+            }
+        }
+    }
+}
+
+.commit-message{
+    display: flex;
+    flex-direction: column;
+    text-align: -webkit-center;
+    background-color: rgb(94, 94, 94);
+    border-radius : 11px;
+
+    header{
+        width: 100%;
+        text-align: -webkit-left;
+        padding: 10px;
+        button {
+            border-radius : 10px;
+            border: 1px solid #efefef;
+            background: rgb(94, 94, 94);
+            color: #efefef;
+        }
+        input{
+            border-radius : 10px;
+            border: 1px solid #efefef;
+            background: rgb(94, 94, 94);
+            color: #efefef;
+        }
+        .scope{
+            width: 65px;
+            border: 1px solid #efefef;
+            background: rgb(94, 94, 94);
+            color: #efefef;
+        }
+        .shortSummary{
+            width: 229px;
+        }
+        .type{
+            width: 70px;
+        }
+    }
+    .body{
+        padding: 10px;
+        textarea{
+            width: 100%;
+            border: none;
+            resize: none;
+            padding : 10px;
+        }
+        .commitBody{
+            height: 180px;
+        }
+        .commitFooter{
+            margin-top: 10px;
+            height: 90px;
+        }
+    }
+    .footer{
+        background: rgb(64, 64, 64);
+        padding-top: 10px;
+        
+        button{
+            background: rgb(64, 64, 64);
+            width: 100%;
+            text-align: left;
+            color: white;
+            border: none;
+            font-size: xx-large;
         }
     }
 }
