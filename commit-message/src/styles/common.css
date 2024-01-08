@@ -190,6 +190,10 @@
   margin-top: 10px;
   height: 90px;
 }
+.commit-message .body .historyBox {
+  text-align-last: left;
+  padding: 10px;
+}
 .commit-message .footer {
   background: rgb(64, 64, 64);
   padding-top: 10px;
