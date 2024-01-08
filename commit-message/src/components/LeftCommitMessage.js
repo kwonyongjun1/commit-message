@@ -72,14 +72,19 @@ export default function Message() {
                 shortSummary: shortSummary,
                 body: body,
                 footer: footer,
-              };
-              
-            copyMessage(message);
+            };
+            copyMessage({...message});
+            saveLocal(message);
         }else{
             return alert("커밋 메시지를 작성해주세요");
         }
     };
 
+    const saveLocal = (messeage) => {
+        let preMessage = !!localStorage.getItem("preMessage") ? JSON.parse(localStorage.getItem("preMessage")) : [];
+        preMessage.push(messeage);
+        localStorage.setItem("preMessage", JSON.stringify(preMessage));
+    }
 
     return(
         <section className = "left-wrap">
