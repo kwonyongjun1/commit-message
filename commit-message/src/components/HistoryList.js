@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { setType, setEmoji, setShortSummary, setScope, setBody, setFooter } from "../redux/actions/Message";
+import { useDispatch } from "react-redux";
 
 export default function HistoryList(){
-
+    const dispatch = useDispatch();
     useEffect(() => {
         let message = localStorage.getItem("preMessage")
         setHistoryMessage(JSON.parse(message));
@@ -17,7 +19,13 @@ export default function HistoryList(){
         // TODO localstorage delete 
     }
     const setMessage = (message) =>{
-        // TODO setMessage
+        let { emoji, type, scope, shortSummary, body, footer } = message;
+        dispatch(setEmoji(emoji));
+        dispatch(setType(type));
+        dispatch(setScope(scope));
+        dispatch(setShortSummary(shortSummary));
+        dispatch(setBody(body));
+        dispatch(setFooter(footer));
     }
 
     return(

@@ -105,13 +105,13 @@ export default function Message() {
                 <header>
                     <button id="emoji" onClick={onClickEmoji}>{emoji}</button>
                     <input type="text" className="type" placeholder="type" value={type} onClick = {onClickType} onChange={onChangeType}/>
-                    <input type="text" className="scope" placeholder="scope" onChange={onChangeScope}/>
+                    <input type="text" className="scope" placeholder="scope" value={scope} onChange={onChangeScope}/>
                     :
-                    <input type="text" className="shortSummary" placeholder="make log easier (#123)" onChange={onChangeShortSummary}/>
+                    <input type="text" className="shortSummary" placeholder="make log easier (#123)" value={shortSummary} onChange={onChangeShortSummary}/>
                 </header>
                 <div className = "body">
-                    <textarea className="commitBody" placeholder="body" onChange={onChangeBody}></textarea>
-                    <textarea className="commitFooter" placeholder="footer" onChange={onChangeFooter}></textarea>
+                    <textarea className="commitBody" placeholder="body" value={body} onChange={onChangeBody}></textarea>
+                    <textarea className="commitFooter" placeholder="footer" value={footer} onChange={onChangeFooter}></textarea>
                 </div>
                 <div className="footer">
                     <button onClick={onClickCopy}>
