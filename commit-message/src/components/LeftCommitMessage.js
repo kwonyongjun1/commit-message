@@ -1,8 +1,8 @@
-import React, {useState} from 'react'
+import React from 'react';
 import { useSelector, useDispatch } from "react-redux";
-import { setAutoMode, setType, setCurrentState, setEmoji } from "../redux/actions/Message";
+import { setAutoMode, setType, setCurrentState, setEmoji, setShortSummary, setScope, setBody, setFooter } from "../redux/actions/Message";
 import {STATE} from "../constants";
-import { findEmojiFromRelType, copyMessage} from "../utils";
+import { findEmojiFromRelType, copyMessage } from "../utils";
 import Form from 'react-bootstrap/Form';
 
 export default function Message() {
@@ -11,10 +11,10 @@ export default function Message() {
     const autoMode = useSelector(state => state.Message.autoMode);
     const emoji = useSelector(state => state.Message.emoji);
     const type = useSelector(state => state.Message.type);
-    const [shortSummary, setShortSummary] = useState();
-    const [scope, setScope] = useState();
-    const [body, setBody] = useState();
-    const [footer, setFooter] = useState();
+    const shortSummary = useSelector(state => state.Message.shortSummary);
+    const scope = useSelector(state => state.Message.scope);
+    const body = useSelector(state => state.Message.body);
+    const footer = useSelector(state => state.Message.footer);
 
     const onClickToggleAuto = () => {
         dispatch(setAutoMode(!autoMode));      
@@ -39,19 +39,19 @@ export default function Message() {
     };
 
     const onChangeScope = (event) => {
-        setScope(event.target.value);
+        dispatch(setScope(event.target.value));
     };
 
     const onChangeShortSummary = (event) =>{
-        setShortSummary(event.target.value);
+        dispatch(setShortSummary(event.target.value));
     };
 
     const onChangeBody = (event) => {
-        setBody(event.target.value);
+        dispatch(setBody(event.target.value));
     };
 
     const onChangeFooter = (event) => {
-        setFooter(event.target.value);
+        dispatch(setFooter(event.target.value));
     };
 
     const onClickCopy = () => {
