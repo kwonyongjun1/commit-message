@@ -162,6 +162,11 @@
   background: rgb(94, 94, 94);
   color: #efefef;
 }
+.commit-message header .emoji {
+  width: 36px;
+  height: 28px;
+  vertical-align: bottom;
+}
 .commit-message header .scope {
   width: 65px;
   border: 1px solid #efefef;

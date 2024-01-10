@@ -115,7 +115,7 @@ export default function Message() {
             </div>
             <article className="commit-message">
                 <header>
-                    <button id="emoji" onClick={onClickEmoji}>{emoji}</button>
+                    <button className="emoji" onClick={onClickEmoji}>{emoji}</button>
                     <input type="text" className="type" placeholder="type" value={type} onClick = {onClickType} onChange={onChangeType}/>
                     <input type="text" className="scope" placeholder="scope" value={scope} onChange={onChangeScope}/>
                     :
