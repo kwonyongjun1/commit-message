@@ -36,15 +36,15 @@ export default function HistoryList(){
                         <div className='commit-message'>
                             <header onClick={(event)=>{event.stopPropagation()}}>
                                 <button id="emoji" disabled>{message.emoji}</button>
-                                <input className="type" type="text" placeholder="type" value={message.type}/>
-                                <input className="scope" type="text" placeholder="scope" value={message.scope}/>
+                                <input className="type" type="text" placeholder="type" value={message.type} readOnly/>
+                                <input className="scope" type="text" placeholder="scope" value={message.scope} readOnly/>
                                 :
-                                <input className="shortSummary" type="text" placeholder="make log easier (#123)" value={message.shortSummary}/>
+                                <input className="shortSummary" type="text" placeholder="make log easier (#123)" value={message.shortSummary} readOnly/>
                                 <button className="delete" onClick={onClickDelete}>X</button>
                             </header>
                             <div className = "body">
-                                <div className="commitBody historyBox" placeholder="body">{message.body}</div>
-                                <div className="commitFooter historyBox" placeholder="footer">{message.footer}</div>
+                                <div className="commitBody historyBox" placeholder="body" readOnly>{message.body}</div>
+                                <div className="commitFooter historyBox" placeholder="footer" readOnly>{message.footer}</div>
                             </div>
                         </div>
                     </div>
