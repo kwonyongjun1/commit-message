@@ -20,7 +20,7 @@ export const emojiList = [
     {id : "sparkles", emoji : "✨", relType: "Feat"},
     {id : "bug", emoji : "🐛", relType: "Fix"},
     {id : "lipstick", emoji : "💄", relType: "Design"},
-    {id : "boom", emoji : "💥", relType: "!BREAKING"},
+    {id : "boom", emoji : "💥", relType: "!BREAKING CHANGE"},
     {id : "ambulance", emoji : "🚑", relType: "!HOTFIX"},
     {id : "art", emoji : "🎨", relType: "Style"},
     {id : "recycle", emoji : "️♻", relType: "Refactor"},
