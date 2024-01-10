@@ -7,7 +7,7 @@ import { findEmojiFromRelType } from "../utils";
 export default function TypeList() {
 
     const dispatch = useDispatch();
-    const selectedType = useSelector(state => state.Message.type);
+    // const selectedType = useSelector(state => state.Message.type);
     const autoMode = useSelector(state => state.Message.autoMode);
 
     const onClickType = (type) =>{
@@ -25,7 +25,6 @@ export default function TypeList() {
             <div>
             {
                 typeList.map((type) => (
-                    type.name.includes(selectedType) && (
                     <dl className="type-box" key={type.name} onClick={()=>{onClickType(type)}}>
                         <dt>
                             {type.name}
@@ -34,14 +33,7 @@ export default function TypeList() {
                             {type.description}
                         </dd>
                     </dl>
-                    )
                 ))
-            }
-            {
-                typeList.some(type => type.name === selectedType) && null ||
-                <div>
-                    No Result
-                </div> 
             }
             </div>
         </div>
