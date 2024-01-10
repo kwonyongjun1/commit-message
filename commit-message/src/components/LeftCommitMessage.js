@@ -56,12 +56,15 @@ export default function Message() {
 
     const onClickCopy = () => {
         copy();
-        // window.localStorage.setItem(key, value)
     };
 
-    const onCLickHistory = () => {
+    const onClickClear = () => {
+        clearMessage();
+    };
+
+    const onClickHistory = () => {
         dispatch(setCurrentState(STATE.HISTROY_MODE));
-    }
+    };
 
     const copy = () => {
         if(!!emoji && !!type && !!shortSummary){
@@ -84,6 +87,15 @@ export default function Message() {
         let preMessage = !!localStorage.getItem("preMessage") ? JSON.parse(localStorage.getItem("preMessage")) : [];
         preMessage.push(messeage);
         localStorage.setItem("preMessage", JSON.stringify(preMessage));
+    };
+
+    const clearMessage = () => {
+        dispatch(setEmoji(""));
+        dispatch(setType(""));
+        dispatch(setScope(""));
+        dispatch(setShortSummary(""));
+        dispatch(setBody(""));
+        dispatch(setFooter(""));
     }
 
     return(
@@ -117,10 +129,10 @@ export default function Message() {
                     <button onClick={onClickCopy}>
                         copy
                     </button>
-                    <button>
+                    <button onClick={onClickClear}>
                         clear
                     </button>
-                    <button onClick={onCLickHistory}>
+                    <button onClick={onClickHistory}>
                         history
                     </button>
                 </div>
