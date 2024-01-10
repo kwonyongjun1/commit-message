@@ -24,10 +24,10 @@ export default function Message() {
         dispatch(setCurrentState(STATE.EMOJI_MODE));
     };
 
-    const onChangeType = (e) => {
-        dispatch(setType(e.target.value));
+    const onChangeType = (event) => {
+        dispatch(setType(event.target.value));
         if(autoMode){
-            let emoji = findEmojiFromRelType(e.target.value);
+            let emoji = findEmojiFromRelType(event.target.value);
             if(emoji){
                 dispatch(setEmoji(emoji.emoji));
             }
@@ -83,10 +83,23 @@ export default function Message() {
         }
     };
 
-    const saveLocal = (messeage) => {
+    const saveLocal = (message) => {
         let preMessage = !!localStorage.getItem("preMessage") ? JSON.parse(localStorage.getItem("preMessage")) : [];
-        preMessage.push(messeage);
+        message.id = getId();
+        preMessage.push(message);
         localStorage.setItem("preMessage", JSON.stringify(preMessage));
+    };
+
+    const getId = () => {
+        const currentDate = new Date();
+        const year = currentDate.getFullYear();
+        const month = currentDate.getMonth() + 1;
+        const day = currentDate.getDate();
+        const hours = currentDate.getHours();
+        const minutes = currentDate.getMinutes();
+        const seconds = currentDate.getSeconds();
+        const Milliseconds = currentDate.getMilliseconds();
+        return `${year}${month}${day}${hours}${minutes}${seconds}${Milliseconds}`
     };
 
     const clearMessage = () => {
@@ -96,12 +109,12 @@ export default function Message() {
         dispatch(setShortSummary(""));
         dispatch(setBody(""));
         dispatch(setFooter(""));
-    }
+    };
 
     return(
         <section className = "left-wrap">
             <header>
-                <span>Commit-Message</span>
+                <span onClick={getId}>Commit-Message</span>
             </header>
             <div className="setting-area">
                 <Form>

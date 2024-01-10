@@ -15,9 +15,10 @@ export default function HistoryList(){
         setMessage(message);
     }
 
-    const onClickDelete = () =>{
+    const onClickDelete = (id) =>{
         // TODO localstorage delete 
     }
+
     const setMessage = (message) =>{
         let { emoji, type, scope, shortSummary, body, footer } = message;
         dispatch(setEmoji(emoji));
@@ -26,6 +27,11 @@ export default function HistoryList(){
         dispatch(setShortSummary(shortSummary));
         dispatch(setBody(body));
         dispatch(setFooter(footer));
+    }
+
+    const deleteHistoryMessage = (id) => {
+        let historyMessage = !!localStorage.getItem("preMessage") ? JSON.parse(localStorage.getItem("preMessage")) : [];
+        
     }
 
     return(
@@ -40,7 +46,7 @@ export default function HistoryList(){
                                 <input className="scope" type="text" placeholder="scope" value={message.scope} readOnly/>
                                 :
                                 <input className="shortSummary" type="text" placeholder="make log easier (#123)" value={message.shortSummary} readOnly/>
-                                <button className="delete" onClick={onClickDelete}>X</button>
+                                <button className="delete" onClick={()=>{onClickDelete(message.id)}}>X</button>
                             </header>
                             <div className = "body">
                                 <div className="commitBody historyBox" placeholder="body" readOnly>{message.body}</div>
