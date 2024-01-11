@@ -5,18 +5,23 @@ import { useDispatch } from "react-redux";
 export default function HistoryList(){
     const dispatch = useDispatch();
     useEffect(() => {
-        let message = localStorage.getItem("preMessage")
-        setHistoryMessage(JSON.parse(message));
+        init();
     }, []);
 
     const [historyMessage, setHistoryMessage] = useState([]);
-   
+    
+    const init = () =>{
+        let message = localStorage.getItem("preMessage")
+        setHistoryMessage(JSON.parse(message));
+    }
+
     const onClickMessage = (message) =>{
         setMessage(message);
     }
 
     const onClickDelete = (id) =>{
-        // TODO localstorage delete 
+        deleteHistoryMessage(id);
+        init();
     }
 
     const setMessage = (message) =>{
@@ -31,7 +36,12 @@ export default function HistoryList(){
 
     const deleteHistoryMessage = (id) => {
         let historyMessage = !!localStorage.getItem("preMessage") ? JSON.parse(localStorage.getItem("preMessage")) : [];
-        
+        const deletedMessage = historyMessage.filter(message => message.id != id);
+        updateLocalStorageHistoryMessage(deletedMessage);
+    }
+
+    const updateLocalStorageHistoryMessage = (historyMessage) => {
+        localStorage.setItem("preMessage", JSON.stringify(historyMessage));
     }
 
     return(
