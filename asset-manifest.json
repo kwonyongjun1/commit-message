@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/commit-message/static/css/main.30102cab.css",
+    "main.js": "/commit-message/static/js/main.e4b48445.js",
+    "static/js/787.10a5d27d.chunk.js": "/commit-message/static/js/787.10a5d27d.chunk.js",
+    "index.html": "/commit-message/index.html",
+    "main.30102cab.css.map": "/commit-message/static/css/main.30102cab.css.map",
+    "main.e4b48445.js.map": "/commit-message/static/js/main.e4b48445.js.map",
+    "787.10a5d27d.chunk.js.map": "/commit-message/static/js/787.10a5d27d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.30102cab.css",
+    "static/js/main.e4b48445.js"
+  ]
+}
