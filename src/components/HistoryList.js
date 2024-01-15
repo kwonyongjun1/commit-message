@@ -11,8 +11,8 @@ export default function HistoryList(){
     const [historyMessage, setHistoryMessage] = useState([]);
     
     const init = () =>{
-        let message = localStorage.getItem("preMessage")
-        setHistoryMessage(JSON.parse(message));
+        let message = !!localStorage.getItem("preMessage") ? JSON.parse(localStorage.getItem("preMessage")) : [];
+        setHistoryMessage(message);
     }
 
     const onClickMessage = (message) =>{
