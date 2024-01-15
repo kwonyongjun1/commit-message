@@ -76,8 +76,14 @@ export default function Message() {
                 body: body,
                 footer: footer,
             };
-            copyMessage({...message});
-            saveLocal(message);
+            try {
+                copyMessage({...message});
+                saveLocal(message);
+                return alert("저장이 완료되었습니다.")
+            } catch (error) {
+                alert("저장이 실패되었습니다.")
+            }
+            
         }else{
             return alert("커밋 메시지를 작성해주세요");
         }
