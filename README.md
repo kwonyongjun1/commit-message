@@ -1,6 +1,6 @@
 # Commit-Message 
 #### 좋은 커밋 메시지를 작성하도록 도와주는 웹 
-#### [👉 Url](https://kwonyongjun1.github.io/commit-message/) 
+#### [👉 URI](https://kwonyongjun1.github.io/commit-message/) 
 
 ## Language
 <div>
