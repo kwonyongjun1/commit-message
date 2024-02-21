@@ -4,9 +4,7 @@ import './App.css';
 import './styles/common.css';
 
 function App() {
-  return (
-      <MainPage/>
-  );
+    return <MainPage />;
 }
 
 export default App;

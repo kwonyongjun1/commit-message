@@ -1,266 +1,266 @@
 * {
-  font-family: emoji !important;
-  font-weight: 100;
+    font-family: emoji !important;
+    font-weight: 100;
 }
 
 .selector-for-some-widget {
-  box-sizing: content-box;
+    box-sizing: content-box;
 }
 
 .mainBody {
-  background-color: #212121;
-  color: white;
-  width: 100%;
-  display: -webkit-box;
-  height: 100vh;
+    background-color: #212121;
+    color: white;
+    width: 100%;
+    display: -webkit-box;
+    height: 100vh;
 }
 .mainBody .left-wrap {
-  width: 31em;
-  padding: 30px 30px 0px 30px;
-  background: rgb(64, 64, 64);
-  box-shadow: 0 0 20px black;
-  font: 15px/2;
+    width: 31em;
+    padding: 30px 30px 0px 30px;
+    background: rgb(64, 64, 64);
+    box-shadow: 0 0 20px black;
+    font: 15px/2;
 }
 .mainBody .left-wrap header {
-  text-align: center;
-  font-weight: 700;
+    text-align: center;
+    font-weight: 700;
 }
 .mainBody .left-wrap header span {
-  font-size: xxx-large;
+    font-size: xxx-large;
 }
 .mainBody .middle-wrap {
-  height: calc(100vh - 40px);
-  margin: 20px;
-  padding: 30px;
-  background: rgb(64, 64, 64);
-  box-shadow: 0 0 20px black;
-  overflow-y: auto;
-  font: 15px/2 Georgia, Serif;
-  width: calc(100% - 31em - 65px);
-  min-width: 408px;
+    height: calc(100vh - 40px);
+    margin: 20px;
+    padding: 30px;
+    background: rgb(64, 64, 64);
+    box-shadow: 0 0 20px black;
+    overflow-y: auto;
+    font: 15px/2 Georgia, Serif;
+    width: calc(100% - 31em - 65px);
+    min-width: 408px;
 }
 .mainBody .middle-wrap .grid-container-emoji {
-  display: grid;
-  grid-template-columns: 280px;
-  grid-gap: 10px;
-  place-content: center;
+    display: grid;
+    grid-template-columns: 280px;
+    grid-gap: 10px;
+    place-content: center;
 }
 .mainBody .middle-wrap .grid-container-emoji .grid-item {
-  background-color: rgb(94, 94, 94);
-  border-radius: 15px;
-  font-size: 200%;
-  border: solid #333;
-  transition: border-color 0.3s ease;
-  line-height: 55px;
-  position: relative;
-  cursor: pointer;
-  display: -webkit-box;
-  min-height: 67px;
+    background-color: rgb(94, 94, 94);
+    border-radius: 15px;
+    font-size: 200%;
+    border: solid #333;
+    transition: border-color 0.3s ease;
+    line-height: 55px;
+    position: relative;
+    cursor: pointer;
+    display: -webkit-box;
+    min-height: 67px;
 }
 .mainBody .middle-wrap .grid-container-emoji .grid-item .emoji {
-  display: flex;
-  width: 2.8em;
-  place-content: center;
-  padding: 10px;
+    display: flex;
+    width: 2.8em;
+    place-content: center;
+    padding: 10px;
 }
 .mainBody .middle-wrap .grid-container-emoji .grid-item .emoji-detail {
-  font-size: 14px;
-  text-align: left;
-  line-height: 3;
-  width: 15em;
+    font-size: 14px;
+    text-align: left;
+    line-height: 3;
+    width: 15em;
 }
 .mainBody .middle-wrap .grid-container-emoji .grid-item:hover {
-  border-color: white;
+    border-color: white;
 }
 @media screen and (min-width: 1200px) {
-  .mainBody .middle-wrap .grid-container-emoji {
-    grid-template-columns: 280px 280px;
-  }
+    .mainBody .middle-wrap .grid-container-emoji {
+        grid-template-columns: 280px 280px;
+    }
 }
 @media screen and (min-width: 1500px) {
-  .mainBody .middle-wrap .grid-container-emoji {
-    grid-template-columns: 280px 280px 280px;
-  }
+    .mainBody .middle-wrap .grid-container-emoji {
+        grid-template-columns: 280px 280px 280px;
+    }
 }
 @media screen and (min-width: 1700px) {
-  .mainBody .middle-wrap .grid-container-emoji {
-    grid-template-columns: 20em 20em 20em 20em;
-  }
+    .mainBody .middle-wrap .grid-container-emoji {
+        grid-template-columns: 20em 20em 20em 20em;
+    }
 }
 .mainBody .middle-wrap .type-box {
-  background-color: rgb(94, 94, 94);
-  border-radius: 15px;
-  padding: 10px;
-  border: solid #333;
-  cursor: pointer;
+    background-color: rgb(94, 94, 94);
+    border-radius: 15px;
+    padding: 10px;
+    border: solid #333;
+    cursor: pointer;
 }
 .mainBody .middle-wrap .type-box:hover {
-  border-color: white;
+    border-color: white;
 }
 .mainBody .middle-wrap .grid-container-history {
-  display: grid;
-  grid-template-columns: 480px;
-  grid-gap: 10px;
-  place-content: center;
-  cursor: pointer;
+    display: grid;
+    grid-template-columns: 480px;
+    grid-gap: 10px;
+    place-content: center;
+    cursor: pointer;
 }
 .mainBody .middle-wrap .grid-container-history .grid-item {
-  background-color: rgb(94, 94, 94);
-  border-radius: 15px;
-  border: solid #333;
-  transition: border-color 0.3s ease;
-  position: relative;
-  cursor: pointer;
-  display: -webkit-box;
-  min-height: 67px;
-  cursor: pointer;
+    background-color: rgb(94, 94, 94);
+    border-radius: 15px;
+    border: solid #333;
+    transition: border-color 0.3s ease;
+    position: relative;
+    cursor: pointer;
+    display: -webkit-box;
+    min-height: 67px;
+    cursor: pointer;
 }
 .mainBody .middle-wrap .grid-container-history .grid-item .emoji {
-  display: flex;
-  width: 2.8em;
-  place-content: center;
-  padding: 10px;
-  cursor: pointer;
+    display: flex;
+    width: 2.8em;
+    place-content: center;
+    padding: 10px;
+    cursor: pointer;
 }
 .mainBody .middle-wrap .grid-container-history .grid-item .emoji-detail {
-  font-size: 14px;
-  text-align: left;
-  line-height: 3;
-  width: 15em;
-  cursor: pointer;
+    font-size: 14px;
+    text-align: left;
+    line-height: 3;
+    width: 15em;
+    cursor: pointer;
 }
 .mainBody .middle-wrap .grid-container-history .grid-item:hover {
-  border-color: white;
+    border-color: white;
 }
 @media screen and (min-width: 1600px) {
-  .mainBody .middle-wrap .grid-container-history {
-    grid-template-columns: 480px 480px;
-  }
+    .mainBody .middle-wrap .grid-container-history {
+        grid-template-columns: 480px 480px;
+    }
 }
 
 .commit-message {
-  display: flex;
-  flex-direction: column;
-  text-align: -webkit-center;
-  background-color: rgb(94, 94, 94);
-  border-radius: 11px;
+    display: flex;
+    flex-direction: column;
+    text-align: -webkit-center;
+    background-color: rgb(94, 94, 94);
+    border-radius: 11px;
 }
 .commit-message header {
-  width: 100%;
-  text-align: -webkit-left;
-  padding: 10px;
+    width: 100%;
+    text-align: -webkit-left;
+    padding: 10px;
 }
 .commit-message header button {
-  border-radius: 10px;
-  border: 1px solid #efefef;
-  background: rgb(94, 94, 94);
-  color: #efefef;
+    border-radius: 10px;
+    border: 1px solid #efefef;
+    background: rgb(94, 94, 94);
+    color: #efefef;
 }
 .commit-message header input {
-  border-radius: 10px;
-  border: 1px solid #efefef;
-  background: rgb(94, 94, 94);
-  color: #efefef;
+    border-radius: 10px;
+    border: 1px solid #efefef;
+    background: rgb(94, 94, 94);
+    color: #efefef;
 }
 .commit-message header .emoji {
-  width: 36px;
-  height: 28px;
-  vertical-align: bottom;
+    width: 36px;
+    height: 28px;
+    vertical-align: bottom;
 }
 .commit-message header .scope {
-  width: 65px;
-  border: 1px solid #efefef;
-  background: rgb(94, 94, 94);
-  color: #efefef;
+    width: 65px;
+    border: 1px solid #efefef;
+    background: rgb(94, 94, 94);
+    color: #efefef;
 }
 .commit-message header .shortSummary {
-  width: 229px;
+    width: 229px;
 }
 .commit-message header .type {
-  width: 70px;
+    width: 70px;
 }
 .commit-message header .noBorder {
-  border: none;
+    border: none;
 }
 .commit-message header .delete {
-  transition: border-color 0.3s ease;
-  border: 1px solid #333;
-  margin-left: 17px;
-  width: 34px;
-  font-weight: 1000;
+    transition: border-color 0.3s ease;
+    border: 1px solid #333;
+    margin-left: 17px;
+    width: 34px;
+    font-weight: 1000;
 }
 .commit-message header .delete:hover {
-  border-color: white;
+    border-color: white;
 }
 .commit-message .body {
-  padding: 10px;
+    padding: 10px;
 }
 .commit-message .body textarea {
-  width: 100%;
-  border: none;
-  resize: none;
-  padding: 10px;
+    width: 100%;
+    border: none;
+    resize: none;
+    padding: 10px;
 }
 .commit-message .body .commitBody {
-  height: 180px;
+    height: 180px;
 }
 .commit-message .body .commitFooter {
-  margin-top: 10px;
-  height: 90px;
+    margin-top: 10px;
+    height: 90px;
 }
 .commit-message .body .historyBox {
-  text-align-last: left;
-  padding: 10px;
+    text-align-last: left;
+    padding: 10px;
 }
 .commit-message .footer {
-  background: rgb(64, 64, 64);
-  padding-top: 10px;
+    background: rgb(64, 64, 64);
+    padding-top: 10px;
 }
 .commit-message .footer button {
-  background: rgb(64, 64, 64);
-  width: 100%;
-  text-align: left;
-  color: white;
-  border: none;
-  font-size: xx-large;
+    background: rgb(64, 64, 64);
+    width: 100%;
+    text-align: left;
+    color: white;
+    border: none;
+    font-size: xx-large;
 }
 
 textarea {
-  background-color: rgb(94, 94, 94);
-  border: none;
-  outline: none;
-  color: #efefef;
+    background-color: rgb(94, 94, 94);
+    border: none;
+    outline: none;
+    color: #efefef;
 }
 
 .form-check input {
-  margin-top: 7px !important;
+    margin-top: 7px !important;
 }
 .form-check label {
-  padding-right: 10px;
+    padding-right: 10px;
 }
 
 .setting-area {
-  display: flex;
-  padding: 10px;
+    display: flex;
+    padding: 10px;
 }
 
 ::-webkit-scrollbar {
-  width: 18px;
+    width: 18px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: transparent;
+    background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #212121;
-  border-radius: 20px;
-  border: 6px solid transparent;
-  background-clip: content-box;
+    background-color: #212121;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(94, 94, 94, 0.5);
+    background-color: rgba(94, 94, 94, 0.5);
 }
 
 /*# sourceMappingURL=common.css.map */
