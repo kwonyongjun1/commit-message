@@ -3,7 +3,7 @@ import { combineReducers } from 'redux';
 import messageReducer from './Message';
 
 const rootReducer = combineReducers({
-    Message: messageReducer,
+  Message: messageReducer,
 });
 
 export default rootReducer;

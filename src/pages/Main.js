@@ -7,14 +7,14 @@ import { useSelector } from 'react-redux';
 import { STATE } from '../constants';
 
 export default function MainPage() {
-    const state = useSelector((state) => state.Message.currentState);
+  const state = useSelector((state) => state.Message.currentState);
 
-    return (
-        <div className="mainBody">
-            <LeftCommitMessage />
-            {state === STATE.EMOJI_MODE && <EmojiList />}
-            {state === STATE.TYPE_MODE && <TypeList />}
-            {state === STATE.HISTROY_MODE && <HistoryList />}
-        </div>
-    );
+  return (
+    <div className="mainBody">
+      <LeftCommitMessage />
+      {state === STATE.EMOJI_MODE && <EmojiList />}
+      {state === STATE.TYPE_MODE && <TypeList />}
+      {state === STATE.HISTROY_MODE && <HistoryList />}
+    </div>
+  );
 }
