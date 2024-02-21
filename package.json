@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "description": "commit-message",
-  "main": "main.js",
+  "main": "public/electron.js",
   "license": "MIT",
   "author": "kwonyongjun",
   "dependencies": {
@@ -53,7 +53,8 @@
     "productName": "commit-message",
     "asar": true,
     "win": {
-      "target": "nsis"
+      "target": "nsis",
+      "icon": "public/icon/favicon.jpg"
     },
     "nsis": {
       "oneClick": true
