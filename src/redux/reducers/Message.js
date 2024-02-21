@@ -6,7 +6,7 @@ import {
   SET_SHORT_SUMMARY,
   SET_SCOPE,
   SET_BODY,
-  SET_FOOTER,
+  SET_FOOTER
 } from '../actions/Message';
 import { STATE } from '../../constants';
 
@@ -18,7 +18,7 @@ const messageState = {
   shortSummary: '',
   scope: '',
   body: '',
-  footer: '',
+  footer: ''
 };
 
 const messageReducer = (state = messageState, action) => {

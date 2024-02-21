@@ -8,7 +8,7 @@ import {
   setShortSummary,
   setScope,
   setBody,
-  setFooter,
+  setFooter
 } from '../redux/actions/Message';
 import { STATE } from '../constants';
 import { findEmojiFromRelType, copyMessage } from '../utils';
@@ -82,7 +82,7 @@ export default function Message() {
         scope: scope,
         shortSummary: shortSummary,
         body: body,
-        footer: footer,
+        footer: footer
       };
       try {
         copyMessage({ ...message });
@@ -97,7 +97,9 @@ export default function Message() {
   };
 
   const saveLocal = (message) => {
-    let preMessage = !!localStorage.getItem('preMessage') ? JSON.parse(localStorage.getItem('preMessage')) : [];
+    let preMessage = !!localStorage.getItem('preMessage')
+      ? JSON.parse(localStorage.getItem('preMessage'))
+      : [];
     message.id = getId();
     preMessage.push(message);
     localStorage.setItem('preMessage', JSON.stringify(preMessage));
@@ -131,7 +133,12 @@ export default function Message() {
       </header>
       <div className="setting-area">
         <Form>
-          <Form.Check type="switch" id="custom-switch" label="EmojiAuto" onClick={onClickToggleAuto} />
+          <Form.Check
+            type="switch"
+            id="custom-switch"
+            label="EmojiAuto"
+            onClick={onClickToggleAuto}
+          />
         </Form>
       </div>
       <article className="commit-message">
@@ -147,7 +154,13 @@ export default function Message() {
             onClick={onClickType}
             onChange={onChangeType}
           />
-          <input type="text" className="scope" placeholder="scope" value={scope} onChange={onChangeScope} />
+          <input
+            type="text"
+            className="scope"
+            placeholder="scope"
+            value={scope}
+            onChange={onChangeScope}
+          />
           :
           <input
             type="text"
@@ -158,8 +171,18 @@ export default function Message() {
           />
         </header>
         <div className="body">
-          <textarea className="commitBody" placeholder="body" value={body} onChange={onChangeBody}></textarea>
-          <textarea className="commitFooter" placeholder="footer" value={footer} onChange={onChangeFooter}></textarea>
+          <textarea
+            className="commitBody"
+            placeholder="body"
+            value={body}
+            onChange={onChangeBody}
+          ></textarea>
+          <textarea
+            className="commitFooter"
+            placeholder="footer"
+            value={footer}
+            onChange={onChangeFooter}
+          ></textarea>
         </div>
         <div className="footer">
           <button onClick={onClickCopy}>copy</button>

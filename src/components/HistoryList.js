@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { setType, setEmoji, setShortSummary, setScope, setBody, setFooter } from '../redux/actions/Message';
+import {
+  setType,
+  setEmoji,
+  setShortSummary,
+  setScope,
+  setBody,
+  setFooter
+} from '../redux/actions/Message';
 import { useDispatch } from 'react-redux';
 
 export default function HistoryList() {
@@ -11,7 +18,9 @@ export default function HistoryList() {
   const [historyMessage, setHistoryMessage] = useState([]);
 
   const init = () => {
-    let message = !!localStorage.getItem('preMessage') ? JSON.parse(localStorage.getItem('preMessage')) : [];
+    let message = !!localStorage.getItem('preMessage')
+      ? JSON.parse(localStorage.getItem('preMessage'))
+      : [];
     setHistoryMessage(message);
   };
 
@@ -35,7 +44,9 @@ export default function HistoryList() {
   };
 
   const deleteHistoryMessage = (id) => {
-    let historyMessage = !!localStorage.getItem('preMessage') ? JSON.parse(localStorage.getItem('preMessage')) : [];
+    let historyMessage = !!localStorage.getItem('preMessage')
+      ? JSON.parse(localStorage.getItem('preMessage'))
+      : [];
     const deletedMessage = historyMessage.filter((message) => message.id != id);
     updateLocalStorageHistoryMessage(deletedMessage);
   };
@@ -63,8 +74,20 @@ export default function HistoryList() {
                 <button id="emoji" disabled>
                   {message.emoji}
                 </button>
-                <input className="type" type="text" placeholder="type" value={message.type} readOnly />
-                <input className="scope" type="text" placeholder="scope" value={message.scope} readOnly />
+                <input
+                  className="type"
+                  type="text"
+                  placeholder="type"
+                  value={message.type}
+                  readOnly
+                />
+                <input
+                  className="scope"
+                  type="text"
+                  placeholder="scope"
+                  value={message.scope}
+                  readOnly
+                />
                 :
                 <input
                   className="shortSummary"
