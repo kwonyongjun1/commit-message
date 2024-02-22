@@ -12,9 +12,7 @@ const createWindow = () => {
     }
   });
 
-  // win.loadFile(path.join(__dirname, 'public/index.html'));
   win.loadURL(path.join('https://kwonyongjun1.github.io/commit-message/'));
-
   win.webContents.openDevTools();
 
   if (process.platform !== 'darwin') {
