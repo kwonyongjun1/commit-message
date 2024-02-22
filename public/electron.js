@@ -5,7 +5,7 @@ const createWindow = () => {
   const win = new BrowserWindow({
     width: 1800,
     height: 1000,
-    icon: path.join(__dirname, '/public/icon/favicon.jpg'),
+    icon: path.join(__dirname, '/public/icon/favicon.png'),
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: false

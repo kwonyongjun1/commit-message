@@ -54,11 +54,10 @@
     "asar": true,
     "win": {
       "target": "nsis",
-      "icon": "public/icon/favicon.jpg"
+      "icon": "public/icon/favicon.png"
     },
     "nsis": {
       "oneClick": true,
-      "installerIcon": "public/icon/favicon.jpg",
       "createDesktopShortcut": true
     }
   },
