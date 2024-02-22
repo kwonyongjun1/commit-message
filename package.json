@@ -57,7 +57,9 @@
       "icon": "public/icon/favicon.jpg"
     },
     "nsis": {
-      "oneClick": true
+      "oneClick": true,
+      "installerIcon": "public/icon/favicon.jpg",
+      "createDesktopShortcut": true
     }
   },
   "devDependencies": {
