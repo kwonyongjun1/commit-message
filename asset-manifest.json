@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/commit-message/static/css/main.30102cab.css",
-    "main.js": "/commit-message/static/js/main.e4b48445.js",
-    "static/js/787.10a5d27d.chunk.js": "/commit-message/static/js/787.10a5d27d.chunk.js",
-    "index.html": "/commit-message/index.html",
-    "main.30102cab.css.map": "/commit-message/static/css/main.30102cab.css.map",
-    "main.e4b48445.js.map": "/commit-message/static/js/main.e4b48445.js.map",
-    "787.10a5d27d.chunk.js.map": "/commit-message/static/js/787.10a5d27d.chunk.js.map"
+    "main.css": "./static/css/main.30102cab.css",
+    "main.js": "./static/js/main.3e024f88.js",
+    "static/js/787.10a5d27d.chunk.js": "./static/js/787.10a5d27d.chunk.js",
+    "index.html": "./index.html",
+    "main.30102cab.css.map": "./static/css/main.30102cab.css.map",
+    "main.3e024f88.js.map": "./static/js/main.3e024f88.js.map",
+    "787.10a5d27d.chunk.js.map": "./static/js/787.10a5d27d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.30102cab.css",
-    "static/js/main.e4b48445.js"
+    "static/js/main.3e024f88.js"
   ]
 }
