@@ -5,15 +5,15 @@ const createWindow = () => {
   const win = new BrowserWindow({
     width: 1800,
     height: 1000,
+    minWidth: 1100,
+    minHeight: 800,
     icon: path.join(__dirname, '/public/icon/favicon.png'),
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: false
     }
   });
-
+  
   win.loadURL(path.join('https://kwonyongjun1.github.io/commit-message/'));
-  win.webContents.openDevTools();
 
   if (process.platform !== 'darwin') {
     win.removeMenu();
