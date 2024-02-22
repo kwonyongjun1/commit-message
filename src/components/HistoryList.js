@@ -58,64 +58,66 @@ export default function HistoryList() {
   return (
     <div className="middle-wrap">
       <div className="grid-container-history">
-        {historyMessage.map((message) => (
-          <div
-            className="grid-item"
-            onClick={() => {
-              onClickMessage(message);
-            }}
-          >
-            <div className="commit-message">
-              <header
-                onClick={(event) => {
-                  event.stopPropagation();
+        {!!historyMessage
+          ? historyMessage.map((message) => (
+              <div
+                className="grid-item"
+                onClick={() => {
+                  onClickMessage(message);
                 }}
               >
-                <button id="emoji" disabled>
-                  {message.emoji}
-                </button>
-                <input
-                  className="type"
-                  type="text"
-                  placeholder="type"
-                  value={message.type}
-                  readOnly
-                />
-                <input
-                  className="scope"
-                  type="text"
-                  placeholder="scope"
-                  value={message.scope}
-                  readOnly
-                />
-                :
-                <input
-                  className="shortSummary"
-                  type="text"
-                  placeholder="make log easier (#123)"
-                  value={message.shortSummary}
-                  readOnly
-                />
-                <button
-                  className="delete"
-                  onClick={() => {
-                    onClickDelete(message.id);
-                  }}
-                >
-                  X
-                </button>
-              </header>
-              <div className="body">
-                <div className="commitBody historyBox" placeholder="body" readOnly>
-                  {message.body}
-                </div>
-                <div className="commitFooter historyBox" placeholder="footer" readOnly>
-                  {message.footer}
+                <div className="commit-message">
+                  <header
+                    onClick={(event) => {
+                      event.stopPropagation();
+                    }}
+                  >
+                    <button id="emoji" disabled>
+                      {message.emoji}
+                    </button>
+                    <input
+                      className="type"
+                      type="text"
+                      placeholder="type"
+                      value={message.type}
+                      readOnly
+                    />
+                    <input
+                      className="scope"
+                      type="text"
+                      placeholder="scope"
+                      value={message.scope}
+                      readOnly
+                    />
+                    :
+                    <input
+                      className="shortSummary"
+                      type="text"
+                      placeholder="make log easier (#123)"
+                      value={message.shortSummary}
+                      readOnly
+                    />
+                    <button
+                      className="delete"
+                      onClick={() => {
+                        onClickDelete(message.id);
+                      }}
+                    >
+                      X
+                    </button>
+                  </header>
+                  <div className="body">
+                    <div className="commitBody historyBox" placeholder="body" readOnly>
+                      {message.body}
+                    </div>
+                    <div className="commitFooter historyBox" placeholder="footer" readOnly>
+                      {message.footer}
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-        ))}
+            ))
+          : null}
       </div>
     </div>
   );
