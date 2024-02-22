@@ -9,11 +9,10 @@ const createWindow = () => {
     minHeight: 800,
     icon: path.join(__dirname, '/public/icon/favicon.png'),
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: false
     }
   });
-
+  
   win.loadURL(path.join('https://kwonyongjun1.github.io/commit-message/'));
 
   if (process.platform !== 'darwin') {
