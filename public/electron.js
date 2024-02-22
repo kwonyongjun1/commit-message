@@ -5,6 +5,8 @@ const createWindow = () => {
   const win = new BrowserWindow({
     width: 1800,
     height: 1000,
+    minWidth: 1100,
+    minHeight: 800,
     icon: path.join(__dirname, '/public/icon/favicon.png'),
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
@@ -12,7 +14,6 @@ const createWindow = () => {
     }
   });
 
-  // win.loadFile(path.join(__dirname, 'public/index.html'));
   win.loadURL(path.join('https://kwonyongjun1.github.io/commit-message/'));
 
   if (process.platform !== 'darwin') {
