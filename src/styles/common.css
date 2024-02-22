@@ -19,7 +19,6 @@
   padding: 30px 30px 0px 30px;
   background: rgb(64, 64, 64);
   box-shadow: 0 0 20px black;
-  font: 15px/2;
 }
 .mainBody .left-wrap header {
   text-align: center;
@@ -215,6 +214,7 @@
 .commit-message .footer {
   background: rgb(64, 64, 64);
   padding-top: 10px;
+  z-index: 1;
 }
 .commit-message .footer button {
   background: rgb(64, 64, 64);
@@ -279,7 +279,7 @@ textarea {
   padding: 0 24px;
   position: fixed;
   visibility: visible;
-  z-index: 999;
+  z-index: 0;
 }
 .toast .toast-content {
   display: flex;
@@ -289,7 +289,8 @@ textarea {
 }
 
 .toast-show {
-  opacity: 1;
+  opacity: 1 !important;
+  z-index: 10;
 }
 
 /*# sourceMappingURL=common.css.map */

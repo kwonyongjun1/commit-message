@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
   setAutoMode,
@@ -25,6 +25,23 @@ export default function Message() {
   const scope = useSelector((state) => state.Message.scope);
   const body = useSelector((state) => state.Message.body);
   const footer = useSelector((state) => state.Message.footer);
+  const [isElectron, setIsElectron] = useState(false);
+
+  useEffect(() => {
+    init();
+  }, []);
+
+  const init = () => {
+    checkElectron();
+  };
+
+  const checkElectron = () => {
+    const isElectron_ = navigator.userAgent.toLowerCase().indexOf(' electron/') > -1;
+
+    if (isElectron_) {
+      setIsElectron(true);
+    }
+  };
 
   const onClickToggleAuto = () => {
     dispatch(setAutoMode(!autoMode));
@@ -120,6 +137,7 @@ export default function Message() {
     return `${year}${month}${day}${hours}${minutes}${seconds}${Milliseconds}`;
   };
 
+
   const clearMessage = () => {
     dispatch(setEmoji(''));
     dispatch(setType(''));
@@ -127,6 +145,11 @@ export default function Message() {
     dispatch(setShortSummary(''));
     dispatch(setBody(''));
     dispatch(setFooter(''));
+  };
+
+  const onClickInstall = () => {
+    const filePath = '/commit-message Setup 0.1.0.exe'; 
+    window.location.href = filePath;
   };
 
   return (
@@ -191,6 +214,7 @@ export default function Message() {
           <button onClick={onClickCopy}>copy</button>
           <button onClick={onClickClear}>clear</button>
           <button onClick={onClickHistory}>history</button>
+          {isElectron ? null : <button onClick={onClickInstall}>install</button>}
         </div>
       </article>
     </section>

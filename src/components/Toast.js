@@ -30,7 +30,7 @@ export default function Toast() {
   }, [toastMessage]);
 
   return (
-    <div className={`toast ${show ? 'show' : ''}`}>
+    <div className={`toast ${show ? 'toast-show' : ''}`}>
       <div className="toast-content">
         <span className="toast-text">{message}</span>
       </div>
