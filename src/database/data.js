@@ -55,7 +55,6 @@ export const emojiList = [
   { id: 'closed_lock_with_key', emoji: '🔐', relType: ' ' },
   { id: 'bookmark', emoji: '🔖', relType: ' ' },
   { id: 'rotating_light', emoji: '🚨', relType: ' ' },
-  { id: 'bookmark', emoji: '🔖', relType: ' ' },
   { id: 'construction', emoji: '🚧', relType: ' ' },
   { id: 'green_heart', emoji: '💚', relType: ' ' },
   { id: 'arrow_down', emoji: '⬇️', relType: ' ' },
