@@ -10,9 +10,11 @@ import {
   setBody,
   setFooter
 } from '../redux/actions/Message';
+import { setToastMessage } from '../redux/actions/Toast';
 import { STATE } from '../constants';
 import { findEmojiFromRelType, copyMessage } from '../utils';
 import Form from 'react-bootstrap/Form';
+import { TOASTMESSGAE } from '../constants/toastMessage';
 
 export default function Message() {
   const dispatch = useDispatch();
@@ -87,12 +89,13 @@ export default function Message() {
       try {
         copyMessage({ ...message });
         saveLocal(message);
-        return alert('저장이 완료되었습니다.');
+
+        return dispatch(setToastMessage(TOASTMESSGAE.SUCCESS));
       } catch (error) {
-        alert('저장이 실패되었습니다.');
+        dispatch(setToastMessage(TOASTMESSGAE.FAIL));
       }
     } else {
-      return alert('커밋 메시지를 작성해주세요');
+      return dispatch(setToastMessage(TOASTMESSGAE.NOTIFICATION));
     }
   };
 

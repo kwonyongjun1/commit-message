@@ -8,6 +8,8 @@ import {
   setFooter
 } from '../redux/actions/Message';
 import { useDispatch } from 'react-redux';
+import { setToastMessage } from '../redux/actions/Toast';
+import { TOASTMESSGAE } from '../constants/toastMessage';
 
 export default function HistoryList() {
   const dispatch = useDispatch();
@@ -31,6 +33,7 @@ export default function HistoryList() {
   const onClickDelete = (id) => {
     deleteHistoryMessage(id);
     init();
+    dispatch(setToastMessage(TOASTMESSGAE.DELETE));
   };
 
   const setMessage = (message) => {
@@ -47,7 +50,7 @@ export default function HistoryList() {
     let historyMessage = !!localStorage.getItem('preMessage')
       ? JSON.parse(localStorage.getItem('preMessage'))
       : [];
-    const deletedMessage = historyMessage.filter((message) => message.id != id);
+    const deletedMessage = historyMessage.filter((message) => message.id !== id);
     updateLocalStorageHistoryMessage(deletedMessage);
   };
 

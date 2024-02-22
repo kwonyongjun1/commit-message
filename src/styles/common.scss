@@ -1,3 +1,5 @@
+// npx sass --watch src/styles/common.scss src/styles/common.css
+
 * {
   font-family: emoji !important;
   font-weight: 100;
@@ -277,4 +279,35 @@ textarea {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: rgba(94, 94, 94, 0.5);
+}
+
+.toast {
+  opacity: 1;
+  align-items: center;
+  background: #323232;
+  border-radius: 4px;
+  bottom: 0;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.28);
+  box-sizing: border-box;
+  display: flex;
+  margin: 24px;
+  max-width: 568px;
+  min-height: 52px;
+  min-width: 288px;
+  padding: 0 24px;
+  position: fixed;
+  visibility: visible;
+  z-index: 999;
+
+  .toast-content {
+    display: flex;
+
+    .toast-text {
+      color: #fff;
+    }
+  }
+}
+
+.toast-show {
+  opacity: 1;
 }

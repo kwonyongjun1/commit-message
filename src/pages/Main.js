@@ -5,12 +5,14 @@ import TypeList from '../components/TypeList';
 import HistoryList from '../components/HistoryList';
 import { useSelector } from 'react-redux';
 import { STATE } from '../constants';
+import Toast from '../components/Toast';
 
 export default function MainPage() {
   const state = useSelector((state) => state.Message.currentState);
 
   return (
     <div className="mainBody">
+      <Toast />
       <LeftCommitMessage />
       {state === STATE.EMOJI_MODE && <EmojiList />}
       {state === STATE.TYPE_MODE && <TypeList />}
