@@ -1,6 +1,5 @@
 # Commit-Message 
 #### 좋은 커밋 메시지를 작성하도록 도와주는 웹 
-#### [👉 접속](https://kwonyongjun1.github.io/commit-message/) 
 
 ## Language
 <div>
@@ -12,8 +11,8 @@
 </div>
 
 ## Main
-![image](https://github.com/kwonyongjun1/commit-message/assets/70560755/7930f636-faf6-4f8a-9dcc-76793a7b2222)
 
+#### [👉 접속](https://kwonyongjun1.github.io/commit-message/) 
 
 
 
