@@ -150,7 +150,7 @@ export default function Message() {
     const result = window.confirm('데스크탑 앱을 설치하시겠습니까??');
 
     if (result) {
-      const filePath = '/commit-message Setup 0.1.0.exe';
+      const filePath = '/commit-message-Setup.exe';
       window.location.href = filePath;
     }
   };
