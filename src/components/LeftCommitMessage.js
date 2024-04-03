@@ -137,7 +137,6 @@ export default function Message() {
     return `${year}${month}${day}${hours}${minutes}${seconds}${Milliseconds}`;
   };
 
-
   const clearMessage = () => {
     dispatch(setEmoji(''));
     dispatch(setType(''));
@@ -148,8 +147,12 @@ export default function Message() {
   };
 
   const onClickInstall = () => {
-    const filePath = '/commit-message Setup 0.1.0.exe'; 
-    window.location.href = filePath;
+    const result = window.confirm('데스크탑 앱을 설치하시겠습니까??');
+
+    if (result) {
+      const filePath = '/commit-message Setup 0.1.0.exe';
+      window.location.href = filePath;
+    }
   };
 
   return (
